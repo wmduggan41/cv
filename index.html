@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>WMDuggan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@huggingface">
+
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/favicon.ico">
 
@@ -21,6 +24,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>WMDuggan</title>
 </head>
 
 <body>
@@ -28,7 +32,30 @@
   <section class="container-fluid" id="title">
 
     <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
 
+      <a class="navbar-brand" href="">WMD</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="pages/projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contactme.html">Connect</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Video (coming soon!)</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
 
     <!-- Title -->
     <div class="row">
@@ -39,7 +66,8 @@
         <h4>Business Operations | Data Science</h4>
         </p>
         <hr>
-        <p>Experienced Operations Manager, and resourceful Data Scientist. Passionate about STEM projects, research & development, analytics, and operations. I value efficiency and a healthy work-life balance.</p>
+        <p>Experienced Operations Manager, and resourceful Data Scientist. Passionate about STEM projects, research & development, analytics, and operations. I value scalability, networking and a balance that encapsulates progressive leadership and
+          development.</p>
         <hr>
       </div>
 
@@ -53,7 +81,7 @@
   <!-- Work -->
   <dl class="work">
     <div>
-      <dt>Professional History</dt>
+      <dt>Professional History</dt><br>
       <dl><a href="https://www.wilmingtonpaper.com/">Wilmington Paper Corporation</a><br>Pine Brook, NJ<br>July, 2015 - Present</dl>
       <dl><a href="https://www.hmit.net/">H&M International Transportation</a><br>Jersey City, NJ<br>November, 2011 - June, 2015</dl>
       <dl><a href="https://www.apmterminals.com/">APM Terminals</a><br>Elizabeth, NJ<br>October, 2009 - October, 2011</dl>
@@ -64,7 +92,7 @@
   <!-- School -->
   <dl class="school">
     <div>
-      <dt>Education</dt>
+      <dt>Education</dt><br>
       <dl><strong>New Jersey Institute of Technology (Expected - December, 2023)</strong><br><em>Newark, New Jersey</em><br>M.S., Data Science</dl><br>
       <dl><strong>York College of Pennsylvania (2008)</strong><br><em>York, Pennsylvania</em><br>B.S., Business Management</dl><br>
       <dl><strong>Seton Hall Preparatory (2004)</strong><br><em>West Orange, New Jersey</em><br>H.S., Diploma</dl>
@@ -74,7 +102,7 @@
 
     <!-- Certs -->
     <dl class="certs">
-      <dt>Certificates</dt>
+      <dt>Certificates</dt><br>
       <dd>Data Mining | New Jersey Institute of Technology | May 2022</dd><br>
       <dd><a href="https://ti-user-certificates.s3.amazonaws.com/5733896a-1d71-46e5-b0a3-1ffcf845fe21/746c0ef7-e07f-4987-aaa4-d3530ad5bcc4-william-duggan-applications-use-cases-professional-certification-certificate.pdf">Rapid Miner</a></dd><br>
       <dd><a href="https://course.learnpowerbi.com/certificates/gxuhamm3gy">Microsoft Power BI</a></dd><br>
@@ -89,18 +117,17 @@
 
     <!-- Skills -->
     <dl class="skills">
-      <dt>Skills</dt>
-      <br>
+      <dt>Skills</dt><br>
       <br>
       <div class="container-fluid">
         <table class="darkTable" border="1">
           <thead>
             <tr>
               <td>
-                <strong>Programming Language</strong>
+                <h3>Programming Language</h3>
               </td>
               <td>
-                <strong>out of 5 stars</strong>
+                <h3>Rating</h3>
               </td>
             </tr>
           </thead>
@@ -140,15 +167,17 @@
 </body>
 
 <!-- Footer -->
-<footer class="white-section" id="footer">
+<footer class="container-fluid" id="footer">
   <div class="container-fluid">
     <i class="social-icon fab fa-facebook-f"></i>
     <i class="social-icon fab fa-twitter"></i>
     <i class="social-icon fab fa-instagram"></i>
     <i class="social-icon fas fa-envelope"></i>
     <p>© Copyright WM Duggan</p>
-    <a class="btn" href="projects.html">My Projects</a> |
-    <a class="btn" href="contactme.html">Contact Me</a><br><br>
+    <div class="buttons">
+      <button class="pulse" href="projects.html">My Projects</button> |
+      <button class="pulse" href="contactme.html">Contact Me</button>
+    </div>
   </div>
 </footer>
 

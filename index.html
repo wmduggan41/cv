@@ -10,96 +10,109 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <style>
-        /*****Styles*****/
-        .dark-mode {
-          background-color: #090909;
-          color: white;
-        }
-        .section-title {
-          margin-top: 1.5rem;
-          font-weight: bold;
-        }
-
-        body {
-          font-family: "Montserrat";
-          text-align: center;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-          font-family: "Montserrat-Bold";
-        }
-
-        p {
-          color: #fff;
-        }
-
-        /* Headings */
-        .big-heading {
-          font-family: "Montserrat-Black";
-          font-size: 3.5rem;
-          line-height: 1.5;
-        }
-
-        .section-heading {
-          font-size: 3rem;
-          line-height: 1.5;
+        /* Custom CSS */
+        .sidebar {
+          position: sticky;
+          top: 0;
+          padding-top: 1rem;
         }
 
         .timeline {
           position: relative;
-          max-width: 1200px;
-          list-style-type: none;
+          max-width: 900px;
+          margin: 0 auto;
         }
 
         .timeline::before {
           content: '';
           position: absolute;
-          width: 3px;
-          background-color: #ccc;
+          width: 4px;
+          background-color: #8cc9e0;
           top: 0;
           bottom: 0;
           left: 50%;
-          margin-left: -1.5px;
+          margin-left: -2px;
         }
 
-        .timeline-item {
+        .timeline-container {
           padding: 10px 40px;
           position: relative;
           background-color: inherit;
           width: 50%;
         }
 
-        .timeline-item::before {
+        .timeline-container::after {
           content: '';
           position: absolute;
           width: 20px;
           height: 20px;
-          background-color: white;
-          border: 3px solid #ccc;
+          left: 45%;
+          background-color: #8cc9e0;
+          border: 2px solid #ffffff;
           top: 15px;
-          left: 50%;
-          margin-left: -10px;
           border-radius: 50%;
           z-index: 1;
         }
 
-        .timeline-item.left {
-          left: 0;
-        }
-
-        .timeline-item.right {
+        .right {
           left: 50%;
         }
 
-        .sidebar {
-          height: 100%;
-          position: fixed;
-          z-index: 1;
-          top: 0;
+        .left {
           left: 0;
-          background-color: #f8f9fa;
-          overflow-x: hidden;
-          padding-top: 20px;
+        }
+
+        .right::before {
+          content: " ";
+          height: 0;
+          position: absolute;
+          top: 22px;
+          width: 0;
+          z-index: 1;
+          right: 30px;
+          border: medium solid #8cc9e0;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent #8cc9e0 transparent transparent;
+        }
+
+        .left::before {
+          content: " ";
+          height: 0;
+          position: absolute;
+          top: 22px;
+          width: 0;
+          z-index: 1;
+          left: 30px;
+          border: medium solid #8cc9e0;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent transparent transparent #8cc9e0;
+        }
+
+        .timeline-container h3, .timeline-container h4 {
+          margin-top: 0;
+        }
+
+        @media (max-width: 767px) {
+          .timeline::before {
+            left: 31px;
+          }
+
+          .timeline-container {
+            width: 100%;
+            padding-left: 50px;
+            padding-right: 25px;
+          }
+
+          .timeline-container::before {
+            left: 60px;
+            border: medium solid #8cc9e0;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #8cc9e0 transparent transparent;
+          }
+
+          .left, .right {
+            left: 0;
+          }
         }
     </style>
 </head>
@@ -110,32 +123,31 @@
             <div class="row">
                 <!-- Sidebar -->
                 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                    <div class="sidebar-sticky">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#professional-summary">Professional Summary</a>
-                                <h2 class="section-title">Work Experience</h2>
-                                    <ul class="timeline">
-                                      <li class="timeline-item left">
-                                        <h3>Company Name</h3>
-                                        <h4>Position</h4>
-                                        <p>Duration
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#work-experience">Work Experience</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#education">Education</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#skills">Skills</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#certifications">Certifications</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#professional-summary">Professional Summary</a>
+                            <h2 class="section-title">Work Experience</h2>
+                                <ul class="timeline">
+                                  <li class="timeline-item left">
+                                    <h3>Company Name</h3>
+                                    <h4>Position</h4>
+                                    <p>Duration
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#work-experience">Work Experience</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#education">Education</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#skills">Skills</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#certifications">Certifications</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
                           <!-- Main content -->
                           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                           <h2 id="professional-summary" class="section-title">Professional Summary</h2>

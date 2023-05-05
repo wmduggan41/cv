@@ -1,8 +1,5 @@
 ![My github stats](https://github-readme-stats.vercel.app/api?username=wmduggan41&show_icons=true&hide_border=true&theme=dark)
 
-![My github Metrics](https://metrics.lecoq.io/wmduggan41?template=classic&config.timezone=America%2FNew_York)
-
-
 **[📌 Starred topics](https://github.com/lowlighter?tab=stars)**
 
 [![](https://img.shields.io/static/v1?style=flat&label=&message=JavaScript&color=222&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACP0lEQVR4AbXBTYiMcRzA8e//9zwzzzMzu/Zt8patDeWltmQdvNQqisvGab0cWYo9TJuSLZs4oEhSwiIHF8pNykVx2RIKBwfWtnYT064ZY2btzPOYZ/56VqNddu2g5/NRmf7tmgAJARMCJgRMCJgQMCFgQsCEgAkBE/6C1qA1v8kXNOmMh1fiNyYV6n/nkjiWRATuXF5ENCJksh7nrqZ5/DyP52nqagz27KilbXMVZUKFdAkcV+O4mrIzV1L0PRtHBOL1Bp+/eJy/nuL1gEuZyT9yXM3Tl3l8Jw/PpaXZ5vbdLzQ1hlm2JEyZSYU0U4kCQxSep+kfdGhpttm9vYZfCZXSTBEKKVrXRvFdu5Vh35EP3H84RrGomUz4D11769m0PoZSMDj8jbO9KQ4eTZIcLVImVEoxQWvQmgnRiNCTiNN7egFbW6swDcXAkMupi58oE2ahNT9oftL84LiagqNZ2hTmSGcDPYk4vldvHMa+lvCZzOBT2uPSzTQL54fo2FnLwLCLzworbEvx5EWeCzfSNDWG6O6MUx0T8k4Jn1KgFBNMZtD3bJxHj8fx3XuQY+xrCd+6liimoRBRjKY8Po4UaT/wnogtZHMevnWro8Sigs/oTiw/zjSWLbawLeHtkEs2V0IMxYY1UQ7tb8AKKxbOM2leYfEhWWQk5ZEvlIhGhC0bY3R11BMOKXwmM1AKdm2bQ3vbHLI5D9sSIrZislUrbS6cmE/B0eQLJaqrBNNQTGYyC0OgrsbgT2xLYVsG0/kOFpXBWx1PUDAAAAAASUVORK5CYII=)](https://github.com/topics/javascript)

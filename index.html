@@ -43,10 +43,13 @@
     </style>
 </head>
 <body>
-    <!-- Add the toggle button -->
+ 
     <button id="toggleDarkMode" class="btn btn-primary">Toggle Dark Mode</button>
     <button id="downloadResume" class="btn btn-primary">Download Resume</button>
-            const downloadResumeBtn = document.getElementById("downloadResume");
+
+    <!-- Wrap your content in a container -->
+    <div id="contentContainer" class="container">
+                    const downloadResumeBtn = document.getElementById("downloadResume");
 
         downloadResumeBtn.addEventListener("click", function () {
             const pdf = new jsPDF.jsPDF();
@@ -84,9 +87,8 @@
             // Download the PDF
             pdf.save("William_Michael_Duggan_Resume.pdf");
         });
+    </div>
 
-
-    <!-- Wrap your content in a container -->
     <div id="contentContainer" class="container">
         <h1>William Michael Duggan</h1>
         <p>Operations Manager | Data Scientist</p>
@@ -233,6 +235,48 @@
     toggleDarkMode.addEventListener("click", function () {
         contentContainer.classList.toggle("dark-mode");
     });
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+
+    <script>
+        const downloadResumeBtn = document.getElementById("downloadResume");
+
+        downloadResumeBtn.addEventListener("click", function () {
+            const pdf = new jsPDF.jsPDF();
+
+            // You can adjust the following settings to control the appearance of the PDF
+            const contentContainer = document.getElementById("contentContainer");
+            const fontSize = 12;
+            const lineHeight = 7;
+            const marginLeft = 20;
+            const marginTop = 20;
+
+            let yOffset = marginTop;
+
+            function addText(text) {
+                pdf.text(text, marginLeft, yOffset);
+                yOffset += lineHeight;
+            }
+
+            // Add content to the PDF
+            contentContainer.querySelectorAll("h1, h2, h3, h4, p, ul").forEach((element) => {
+                if (element.tagName === "H1" || element.tagName === "H2" || element.tagName === "H3" || element.tagName === "H4") {
+                    yOffset += lineHeight;
+                    pdf.setFontSize(fontSize + 4);
+                    addText(element.textContent);
+                    pdf.setFontSize(fontSize);
+                } else if (element.tagName === "P") {
+                    addText(element.textContent);
+                } else if (element.tagName === "UL") {
+                    element.querySelectorAll("li").forEach((li) => {
+                        addText("- " + li.textContent);
+                    });
+                }
+            });
+
+            // Download the PDF
+            pdf.save("William_Michael_Duggan_Resume.pdf");
+        });
+    </script>
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 

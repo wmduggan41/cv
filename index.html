@@ -45,6 +45,46 @@
 <body>
     <!-- Add the toggle button -->
     <button id="toggleDarkMode" class="btn btn-primary">Toggle Dark Mode</button>
+    <button id="downloadResume" class="btn btn-primary">Download Resume</button>
+            const downloadResumeBtn = document.getElementById("downloadResume");
+
+        downloadResumeBtn.addEventListener("click", function () {
+            const pdf = new jsPDF.jsPDF();
+
+            // You can adjust the following settings to control the appearance of the PDF
+            const contentContainer = document.getElementById("contentContainer");
+            const fontSize = 12;
+            const lineHeight = 7;
+            const marginLeft = 20;
+            const marginTop = 20;
+
+            let yOffset = marginTop;
+
+            function addText(text) {
+                pdf.text(text, marginLeft, yOffset);
+                yOffset += lineHeight;
+            }
+
+            // Add content to the PDF
+            contentContainer.querySelectorAll("h1, h2, h3, h4, p, ul").forEach((element) => {
+                if (element.tagName === "H1" || element.tagName === "H2" || element.tagName === "H3" || element.tagName === "H4") {
+                    yOffset += lineHeight;
+                    pdf.setFontSize(fontSize + 4);
+                    addText(element.textContent);
+                    pdf.setFontSize(fontSize);
+                } else if (element.tagName === "P") {
+                    addText(element.textContent);
+                } else if (element.tagName === "UL") {
+                    element.querySelectorAll("li").forEach((li) => {
+                        addText("- " + li.textContent);
+                    });
+                }
+            });
+
+            // Download the PDF
+            pdf.save("William_Michael_Duggan_Resume.pdf");
+        });
+
 
     <!-- Wrap your content in a container -->
     <div id="contentContainer" class="container">
@@ -138,6 +178,9 @@
                 <p>January 2012 - October 2013</p>
                 <ul>
                     <!-- Add relevant job description points here -->
+                    <li>Managed 16+ company assets to unload and load 6 daily cargo trains for Norfolk Southern (NS).</li>
+                    <li>Tracked and analyzed daily train manifests to report on-time receiving and delivering of hazardous and non-hazardous cargo.</li
+                    <li>Responsible for safety and security of shift employees, reporting daily lift per man hour and all mechanical down times.</li>
                 </ul>
             </div>
         </div>
@@ -147,6 +190,8 @@
                 <h4>APM Terminals</h4>
                 <ul>
                     <!-- Add relevant job description points here -->
+                    <li>Manage ILA stevedoring operations for loading, unloading cargo vessels.</li>
+                    <li>Coordinated with ILA foreman and upper management to reach +40 lifts per man hour.</li
                 </ul>
             </div>
         </div>
@@ -189,5 +234,7 @@
         contentContainer.classList.toggle("dark-mode");
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+
 </body>
 </html>

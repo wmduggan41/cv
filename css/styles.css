@@ -11,7 +11,6 @@
 
 body {
   font-family: "Montserrat";
-  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,63 +33,109 @@ p {
   line-height: 1.5;
 }
 
+.sidebar {
+position: sticky;
+top: 0;
+padding-top: 1rem;
+}
+
 .timeline {
-  position: relative;
-  max-width: 1200px;
-  list-style-type: none;
+position: relative;
+max-width: 900px;
+margin: 0 auto;
 }
 
 .timeline::before {
-  content: '';
-  position: absolute;
-  width: 3px;
-  background-color: #ccc;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1.5px;
+content: '';
+position: absolute;
+width: 4px;
+background-color: #8cc9e0;
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -2px;
 }
 
-.timeline-item {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+.timeline-container {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border: 3px solid #ccc;
-  top: 15px;
-  left: 50%;
-  margin-left: -10px;
-  border-radius: 50%;
-  z-index: 1;
+.timeline-container::after {
+content: '';
+position: absolute;
+width: 20px;
+height: 20px;
+left: 45%;
+background-color: #8cc9e0;
+border: 2px solid #ffffff;
+top: 15px;
+border-radius: 50%;
+z-index: 1;
 }
 
-.timeline-item.left {
+.right {
+left: 50%;
+}
+
+.left {
+left: 0;
+}
+
+.right::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+right: 30px;
+border: medium solid #8cc9e0;
+border-width: 10px 10px 10px 0;
+border-color: transparent #8cc9e0 transparent transparent;
+}
+
+.left::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+left: 30px;
+border: medium solid #8cc9e0;
+border-width: 10px 10px 10px 0;
+border-color: transparent transparent transparent #8cc9e0;
+}
+
+.timeline-container h3, .timeline-container h4 {
+margin-top: 0;
+}
+
+@media (max-width: 767px) {
+.timeline::before {
+  left: 31px;
+}
+
+.timeline-container {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 25px;
+}
+
+.timeline-container::before {
+  left: 60px;
+  border: medium solid #8cc9e0;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #8cc9e0 transparent transparent;
+}
+
+.left, .right {
   left: 0;
+  }
 }
-
-.timeline-item.right {
-  left: 50%;
-}
-
-.sidebar {
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #f8f9fa;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
 
 /* Buttons */
 .download-button {
@@ -111,8 +156,8 @@ p {
 /* Title Image */
 .title-image {
   width: 60%;
-  transform: rotate(25deg);
-  position: absolute;
+  /*transform: rotate(25deg);
+  position: absolute;*/
   right: 30%;
 }
 
@@ -145,7 +190,7 @@ p {
 
 /* SECTIONS */
 .colored-section {
-  background-color: #009933;
+  background-color: #090909;
   color: #fff;
 }
 
@@ -172,7 +217,7 @@ p {
 }
 
 .btn:hover {
-  background: #3cfc93;
+  background: #090909;
   background-image: -webkit-linear-gradient(top, #ffff00, #999900);
   background-image: -moz-linear-gradient(top, #ffff00, #999900);
   background-image: -ms-linear-gradient(top, #ffff00, #999900);

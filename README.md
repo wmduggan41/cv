@@ -1,6 +1,6 @@
 ![My github stats](https://github-readme-stats.vercel.app/api?username=wmduggan41&show_icons=true&hide_border=true&theme=dark)
 
-![Metrics](https://metrics.lecoq.io/wmduggan41?template=classic&config.timezone=America%2FNew_York)
+![My github Metrics](https://metrics.lecoq.io/wmduggan41?template=classic&config.timezone=America%2FNew_York)
 
 
 **[📌 Starred topics](https://github.com/lowlighter?tab=stars)**

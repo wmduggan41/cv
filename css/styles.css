@@ -1,4 +1,14 @@
 /*****Styles*****/
+
+.dark-mode {
+  background-color: #090909;
+  color: white;
+}
+.section-title {
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
 body {
   font-family: "Montserrat";
   text-align: center;

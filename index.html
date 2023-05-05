@@ -10,7 +10,97 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <style>
-        /* Add custom CSS here */
+        /*****Styles*****/
+        .dark-mode {
+          background-color: #090909;
+          color: white;
+        }
+        .section-title {
+          margin-top: 1.5rem;
+          font-weight: bold;
+        }
+
+        body {
+          font-family: "Montserrat";
+          text-align: center;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Montserrat-Bold";
+        }
+
+        p {
+          color: #fff;
+        }
+
+        /* Headings */
+        .big-heading {
+          font-family: "Montserrat-Black";
+          font-size: 3.5rem;
+          line-height: 1.5;
+        }
+
+        .section-heading {
+          font-size: 3rem;
+          line-height: 1.5;
+        }
+
+        .timeline {
+          position: relative;
+          max-width: 1200px;
+          list-style-type: none;
+        }
+
+        .timeline::before {
+          content: '';
+          position: absolute;
+          width: 3px;
+          background-color: #ccc;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          margin-left: -1.5px;
+        }
+
+        .timeline-item {
+          padding: 10px 40px;
+          position: relative;
+          background-color: inherit;
+          width: 50%;
+        }
+
+        .timeline-item::before {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          border: 3px solid #ccc;
+          top: 15px;
+          left: 50%;
+          margin-left: -10px;
+          border-radius: 50%;
+          z-index: 1;
+        }
+
+        .timeline-item.left {
+          left: 0;
+        }
+
+        .timeline-item.right {
+          left: 50%;
+        }
+
+        .sidebar {
+          height: 100%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #f8f9fa;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
     </style>
 </head>
 

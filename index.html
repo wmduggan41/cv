@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Michael Duggan - Resume</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-vertical-timeline@0.1.0/dist/bootstrap-vertical-timeline.min.css">
     <style>
+        /* Custom styles for resume */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -27,123 +30,164 @@
         li {
             margin-bottom: 5px;
         }
-          /* Add styles for dark mode */
-    .dark-mode {
-        background-color: #222;
-        color: #ddd;
-    }
 
-    .dark-mode ul {
-        color: #ddd;
-    }
-   </style>
+        /* Add styles for dark mode */
+        .dark-mode {
+            background-color: #222;
+            color: #ddd;
+        }
+
+        .dark-mode ul {
+            color: #ddd;
+        }
+    </style>
 </head>
-  <!-- Add a simple navigation bar -->
-<nav>
-    <ul>
-        <li><a href="#ProfessionalSummary">Professional Summary</a></li>
-        <li><a href="#KeySkills">Key Skills</a></li>
-        <li><a href="#WorkExperience">Work Experience</a></li>
-        <li><a href="#Education">Education</a></li>
-    </ul>
-</nav>
-
-    <!-- Add ids to the corresponding sections -->
-    <h2 id="ProfessionalSummary">Professional Summary</h2>
-    <!-- ... -->
-    <h2 id="KeySkills">Key Skills</h2>
-    <!-- ... -->
-    <h2 id="WorkExperience">Work Experience</h2>
-    <!-- ... -->
-    <h2 id="Education">Education</h2>
-    <!-- ... -->
-
- <!-- Add the toggle button -->
-    <button id="toggleDarkMode">Toggle Dark Mode</button>
+<body>
+    <!-- Add the toggle button -->
+    <button id="toggleDarkMode" class="btn btn-primary">Toggle Dark Mode</button>
 
     <!-- Wrap your content in a container -->
-    <div id="contentContainer">
-        <!-- Your existing resume content goes here -->
-    </div>
-<body>
-    <h1>William Michael Duggan</h1>
-    <p>Operations Manager | Data Scientist</p>
-    <p>Phone: (973) 303-3354</p>
-    <p>Email: wmduggan@gmail.com</p>
-    <p>Address: Morris Plains, NJ 07950</p>
-    <p>LinkedIn: wmduggan</p>
-    <p>Website: iamduggan.com</p>
+    <div id="contentContainer" class="container">
+        <h1>William Michael Duggan</h1>
+        <p>Operations Manager | Data Scientist</p>
+        <p>Phone: (973) 303-3354</p>
+        <p>Email: wmduggan@gmail.com</p>
+        <p>Address: Morris Plains, NJ 07950</p>
+        <p>LinkedIn: wmduggan</p>
+        <p>Website: iamduggan.com</p>
 
-    <h2>Professional Summary</h2>
-    <p>Business operations manager with over 13 years of experience in logistics, armed with data analysis, machine learning,
-    and programming skills. Passionate about developing data-driven solutions to address complex business challenges. A
-    strategic thinker with insight for leveraging technology to improve business processes and drive innovation.</p>
+        <!-- Add a simple navigation bar -->
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#ProfessionalSummary">Professional Summary</a></li>
+                <li class="nav-item"><a class="nav-link" href="#KeySkills">Key Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#WorkExperience">Work Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Education">Education</a></li>
+            </ul>
+        </nav>
 
-    <h2>Key Skills</h2>
+        <!-- Add ids to the corresponding sections -->
+        <h2 id="ProfessionalSummary">Professional Summary</h2>
+        <p>Business operations manager with over 13 years of experience in logistics, armed with data analysis, machine learning,
+        and programming skills. Passionate about developing data-driven solutions to address complex business challenges. A
+        strategic thinker with insight for leveraging technology to improve business processes and drive
+    <h2 id="KeySkills">Key Skills</h2>
     <ul>
         <li>CSS</li>
         <li>HTML</li>
-        <li>Javascript</li>
+        <li>JavaScript</li>
         <li>Operations Management</li>
         <li>Python</li>
         <li>R</li>
         <li>SQL</li>
     </ul>
 
-    <h2>Work Experience</h2>
-    <h3>Operations & Data Lead - Wilmington Paper Corporation</h3>
-    <p>Jul 2015 - Apr 2023, Pine Brook, NJ</p>
-    <ul>
-        <li>Managed daily supply chain operations for 30+ accounts, ensuring safe and reliable workflows for suppliers,
-        customers, and carriers.</li>
-        <!-- Add the rest of the job responsibilities here -->
-    </ul>
+    <h2 id="WorkExperience">Work Experience</h2>
+    <!-- Work Experience Timeline -->
+    <div class="vertical-timeline">
+        <div class="vertical-timeline-item">
+            <div class="vertical-timeline-content">
+                <h3>Operations & Data Lead</h3>
+                <h4>Wilmington Paper Corporation</h4>
+                <p>July 2015 - April 2023</p>
+                <p>Pine Brook, NJ</p>
+                <ul>
+                    <li>Managed daily supply chain operations for 30+ accounts, ensuring safe and reliable workflows for suppliers,
+                    customers, and carriers.</li>
+                    <li>Established standard operating procedures and work instructions for 30+ accounts, promoting consistency and
+                    scalability in operations.</li>
+                    <li>Trained employees to navigate and operate internal database to create, edit, and report accurate information to
+                    collect and distribute across departments.</li>
+                    <li>Extracted data from internal database using SQL queries to support data-driven decision making and improve
+                    customer understanding and satisfaction.</li>
+                    <li>Enabled data-driven decision making by ETL methods to create and categorize key features matching regional vendor
+                    costs and business requirements from trend analysis.</li>
+                    <li>Conducted a data project to identify inefficiencies in supply chain operations.</li>
+                    <li>Achieved a 6% net cost reduction through the implementation of negotiating with reliable vendors for exporting
+                    product out of our mid-west accounts.</li>
+                    <li>Assisted the IT group with DevOps for the customer web portal, providing back-end support and administrative
+                    credentials.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="vertical-timeline-item">
+            <div class="vertical-timeline-content">
+                <h3>Assistant Terminal Manager</h3>
+                <h4>H&M International Transportation</h4>
+                <p>October 2013 - June 2015</p>
+                <p>Jersey City, NJ</p>
+                <ul>
+                    <li>Ensured seamless alignment of Operation Manager shifts with 10 daily inbound/outbound cargo train schedules.</li>
+                    <li>Assisted in negotiating local ILA labor contracts, providing 24/7 lift operation coverage to Norfolk Southern and CSX
+                    rail yards.</li>
+                    <li>Improved expected lift per man hour (LPMH) by 10%, resulting in increased productivity and efficiency.</li>
+                    <li>Monitored train arrival and departure times to ensure timely and safe operations.</li>
+                    <li>Scheduled and managed manpower effectively to increase terminal efficiency and reduce delays.</li>
+                    <li>Collaborated closely with stakeholders to identify and meet their needs, resulting in improved customer satisfaction.</li>
+                    <li>Established and tracked key performance indicators (KPIs) for railroad operations.</li>
+                    <li>Reduced vendor dwell time by 25% from over 2 hours to 1 hour and 15 minutes.</li>
+                    <li>Increased operational efficiency, resulting in improved productivity and reduced downtime.</li>
+                    <li>Implemented cost-saving measures that resulted in decreased expenses.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="vertical-timeline-item">
+            <div class="vertical-timeline-content">
+                <h3>Operations Manager, Rail Department</h3>
+                <h4>APM Terminals</h4>
+                <p>January 2012 - October 2013</p>
+                <ul>
+                    <!-- Add relevant job description points here -->
+                </ul>
+            </div>
+        </div>
+        <div class="vertical-timeline-item">
+            <div class="vertical-timeline-content">
+                <h3>Operations Manager, Marine Department</h3>
+                <h4>APM Terminals</h4>
+                <ul>
+                    <!-- Add relevant job description points here -->
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <h3>Assistant Terminal Manager - H&M International Transportation</h3>
-    <p>Oct 2013 - Jun 2015, Jersey City, NJ</p>
-    <ul>
-        <li>Ensured seamless alignment of Operation Manager shifts with 10 daily inbound/outbound cargo train schedules.</li>
-        <!-- Add the rest of the job responsibilities here -->
-    </ul>
-
-    <h3>Operations Manager - H&M International Transportation</h3>
-    <p>Jan 2012 - Oct 2013</p>
-    <ul>
-        <li>Operations Manager, Rail Department - APM Terminals</li>
-        <li>Operations Manager, Marine Department - APM Terminals</li>
-    </ul>
-
-    <h2>Education</h2>
-    <h3>Master of Science, Data Science - New Jersey Institute of Technology</h3>
+    <h2 id="Education">Education</h2>
+    <h3>Master of Science, Data Science</h3>
+    <h4>New Jersey Institute of Technology</h4>
     <p>Computational Track</p>
 
-    <h3>Bachelor of Science, Business Administration - York College of Pennsylvania</h3>
-    <p>Students In Free
-     <script>
-        // Function to toggle dark mode
-        function toggleDarkMode() {
-            const container = document.getElementById('contentContainer');
-            container.classList.toggle('dark-mode');
-        }
+    <h3>Bachelor of Science, Business Administration</h3>
+    <h4>York College of Pennsylvania</h4>
+    <p>Students In Free Enterprise (SIFE)</p>
+    <p>Varsity</p>
+</div>
 
-        // Add event listener for the toggle button
-        const toggleButton = document.getElementById('toggleDarkMode');
-        toggleButton.addEventListener('click', toggleDarkMode);
+<!-- Add necessary JavaScript files -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/bootstrap-vertical-timeline@0.1.0/dist/bootstrap-vertical-timeline.min.js"></script>
 
-        // Function for smooth scrolling
-        function smoothScroll(target) {
-            const yOffset = -20;
-            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
+<script>
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-        // Add event listeners for smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                smoothScroll(target);
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-    </script>
-   </body>
+    });
+
+    // Add dark mode toggle
+    const toggleDarkMode = document.getElementById("toggleDarkMode");
+    const contentContainer = document.getElementById("contentContainer");
+
+    toggleDarkMode.addEventListener("click", function () {
+        contentContainer.classList.toggle("dark-mode");
+    });
+</script>
+</body>
+</html>

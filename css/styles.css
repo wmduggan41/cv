@@ -86,6 +86,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 30%;
 }
 
+#professional-summary {
+  color: #009933;
+}
+
+
 /* Uncomment the following section if you want to apply styles for the Features section
 /* Features Section */
 /* #features {

@@ -60,6 +60,27 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Wrappers */
+.sortable-wrapper {
+  border: 2px dotted black;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sortable-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+
 /* Buttons */
 .download-button {
   margin: 5% 3% 5% 0;
@@ -90,6 +111,30 @@ h1, h2, h3, h4, h5, h6 {
   color: #009933;
 }
 
+@media only screen and (min-width: 600px)
+.PR .section-child::before, .ED .section-child::before, .INT .section-child::before {
+    content: '';
+    display: block;
+    position: absolute;
+    color: rgb(50,50,50);
+    width: 20px;
+    height: 20px;
+    background: rgb(50,50,50);
+    border-radius: 50%;
+    left: -36px;
+    top: 34px;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 0 0 0 !important;
+    -webkit-font-smoothing: antialiased;
+}
+style attribute {
+    font-size: 14px;
+    height: 100%;
+}
 
 /* Uncomment the following section if you want to apply styles for the Features section
 /* Features Section */
@@ -121,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* SECTIONS */
 .colored-section {
-  background-color: #009933;
+  background-color: ##146933;
   color: #fff;
 }
 
@@ -148,12 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:hover {
-  background: #090909;
-  background-image: -webkit-linear-gradient(top, #ffff00, #999900);
-  background-image: -moz-linear-gradient(top, #ffff00, #999900);
-  background-image: -ms-linear-gradient(top, #ffff00, #999900);
-  background-image: -o-linear-gradient(top, #ffff00, #999900);
-  background-image: linear-gradient(to bottom, #ffff00, #999900);
+  background: #146933;
   text-decoration: none;
 }
 

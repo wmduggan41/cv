@@ -1,6 +1,4 @@
 /*****Styles*****/
-
-/* General styles */
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -16,7 +14,7 @@ h2.section-title {
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px dotted #333;
 }
 
 .vertical-wrapper {
@@ -88,7 +86,7 @@ h2.section-title {
 
 /* Buttons */
 .download-button {
-  margin: 5% 3% 5% 0;
+  margin: 2% 0% 2% 0;
 }
 
 
@@ -129,40 +127,6 @@ h2.section-title {
     left: -36px;
     top: 34px;
 }
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-body {
-    margin: 0 0 0 0 !important;
-    -webkit-font-smoothing: antialiased;
-}
-style attribute {
-    font-size: 14px;
-    height: 100%;
-}
-
-/* Uncomment the following section if you want to apply styles for the Features section
-/* Features Section */
-/* #features {
-  position: relative;
-}
-
-.feature-title {
-  font-size: 1.5rem;
-}
-
-.feature-box {
-  padding: 4.5%;
-}
-
-.icon {
-  color: #3cfc93;
-  margin-bottom: 1rem;
-}
-
-.icon:hover {
-  color: #19b03c;
-} */
 
 /*****CONTAINERS*****/
 .container-fluid {
@@ -193,7 +157,7 @@ style attribute {
   font-family: "Monospace", monospace;
   color: #ffffff;
   font-size: 14px;
-  padding: 5px 10px 5px 10px;
+  padding: 2.5px 5px 2.5px 5px;
   text-decoration: none;
 }
 

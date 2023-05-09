@@ -147,6 +147,25 @@ margin-bottom: 30px;
     top: 34px;
 }
 
+/* Add this to your CSS file or within a <style> tag in your HTML file */
+
+/* Apply styles for screens smaller than 768px */
+@media (max-width: 767.98px) {
+  .vertical-wrapper {
+    /* Add your desired styles for smaller screens here */
+    padding: 20px;
+  }
+}
+
+/* Apply styles for screens equal to or larger than 768px */
+@media (min-width: 768px) {
+  .vertical-wrapper {
+    /* Add your desired styles for larger screens here */
+    padding: 40px;
+  }
+}
+
+
 /*****CONTAINERS*****/
 .container-fluid {
   padding: 3% 15% 7%;

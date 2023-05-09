@@ -60,25 +60,34 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Wrappers */
-.sortable-wrapper-horizontal {
-  border-top: 2px dotted black;
+.section-wrapper {
   position: relative;
   padding: 20px 0;
   margin: 20px 0;
 }
 
-.sortable-wrapper-horizontal::before {
+.section-wrapper::before {
   content: '';
   position: absolute;
-  top: -10px;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  border-top: 2px dotted black;
+}
+
+.section-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
   left: 50%;
   margin-left: -5px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: black;
+  z-index: 2;
 }
+
 
 /* Buttons */
 .download-button {

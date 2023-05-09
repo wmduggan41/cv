@@ -61,14 +61,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Wrappers */
-.sortable-wrapper {
-  border: 2px dotted black;
+.sortable-wrapper-horizontal {
+  border-top: 2px dotted black;
   position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 
-.sortable-wrapper::before {
+.sortable-wrapper-horizontal::before {
   content: '';
   position: absolute;
   top: -10px;
@@ -79,7 +79,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   background-color: black;
 }
-
 
 /* Buttons */
 .download-button {

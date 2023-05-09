@@ -1,188 +1,220 @@
 /*****Styles*****/
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  color: #333;
-}
-
-h2 {
-  color: #006400;
-}
-
-
-h2.section-title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-h2.section-title::before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #333;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.vertical-wrapper {
-  position: relative;
-}
-
-.vertical-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(50% - 1px);
-  width: 1px;
-  background: #333;
-  background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5));
-  background-size: 1px 4px;
-  background-repeat: repeat-y;
-}
-/* Dark mode */
-.dark-mode {
-  background-color: #090909;
-  color: white;
-}
-
-/* Section titles */
-.section-title {
-  margin-top: 1.5rem;
-  font-weight: bold;
-}
-
-/* ED-child 2 section */
-.ed-child2 {
-  background-color: #f9f9f9;
-  padding: 2rem 0;
-}
-
-.ed-child2-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.ed-child2-item {
-  flex-basis: 100%;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.ed-child2-item img {
-  max-width: 100%;
-}
-
-/* For medium and large screens */
-@media (min-width: 768px) {
-  .ed-child2-item {
-    flex-basis: 45%;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
   }
-}
 
-/* For extra-large screens */
-@media (min-width: 1200px) {
-  .ed-child2-item {
-    flex-basis: 30%;
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #333;
   }
-}
 
+  h2 {
+    color: #006400;
+  }
 
-/* Buttons */
-.download-button {
-  margin: 2% 0% 2% 0;
-}
+  h2.section-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
 
-.skill-button {
-margin-bottom: 30px;
-}
+  h2.section-title::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-/* Title Section */
-#title {
+  .vertical-wrapper {
+    /* Add any additional styles you need for the wrapper */
+    max-width: 768px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the content */
+  }
+
+  .vertical-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 1px);
+    width: 1px;
+    background: #333;
+    background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5));
+    background-size: 1px 4px;
+    background-repeat: repeat-y;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 100%;
+    width: 2px;
+    background-color: #ddd;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .timeline-year {
+    position: absolute;
+    left: -35px;
+    width: 30px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .timeline-content {
+    padding-left: 20px;
+  }
+
+  .timeline-content h4 {
+    margin-top: 0;
+  }
+
+  /* Dark mode */
+  .dark-mode {
+    background-color: #090909;
+    color: white;
+  }
+
+  /* Section titles */
+  .section-title {
+    margin-top: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* ED-child 2 section */
+  .ed-child2 {
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+  }
+
+  .ed-child2-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .ed-child2-item {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .ed-child2-item img {
+    max-width: 100%;
+  }
+
+  /* For medium and large screens */
+  @media (min-width: 768px) {
+    .ed-child2-item {
+      flex-basis: 45%;
+    }
+  }
+
+  /* For extra-large screens */
+  @media (min-width: 1200px) {
+    .ed-child2-item {
+      flex-basis: 30%;
+    }
+  }
+
+  /* Buttons */
+  .download-button {
+    margin: 2% 0% 2% 0;
+  }
+
+  /* Title Section */
+  #title {
   background-color: #146933;
   color: #fff;
   text-align: left;
-}
+  }
 
-#title .container-fluid {
+  #title .container-fluid {
   padding: 3% 15% 7%;
-}
+  }
 
-/* Title Image */
-.title-image {
-  width: 50%;
-  /* Uncomment the following lines if you want to apply rotation and position styles
+  /* Title Image */
+  .title-image {
+  width: 30%;
+  / Uncomment the following lines if you want to apply rotation and position styles
   transform: rotate(25deg);
   position: absolute;*/
-  right: 30%;
-}
+  right: 20%;
+  }
 
-#professional-summary {
+  #professional-summary {
   color: #009933;
-}
-
-@media only screen and (min-width: 600px)
-.PR .section-child::before, .ED .section-child::before, .INT .section-child::before {
-    content: '';
-    display: block;
-    position: absolute;
-    color: rgb(50,50,50);
-    width: 20px;
-    height: 20px;
-    background: rgb(50,50,50);
-    border-radius: 50%;
-    left: -36px;
-    top: 34px;
-}
-
-/* Add this to your CSS file or within a <style> tag in your HTML file */
-
-/* Apply styles for screens smaller than 768px */
-@media (max-width: 767.98px) {
-  .vertical-wrapper {
-    /* Add your desired styles for smaller screens here */
-    padding: 20px;
   }
-}
 
-/* Apply styles for screens equal to or larger than 768px */
-@media (min-width: 768px) {
-  .vertical-wrapper {
-    /* Add your desired styles for larger screens here */
-    padding: 40px;
+  @media only screen and (min-width: 600px) {
+  .PR .section-child::before, .ED .section-child::before, .INT .section-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  color: rgb(50, 50, 50);
+  width: 20px;
+  height: 20px;
+  background: rgb(50, 50, 50);
+  border-radius: 50%;
+  left: -36px;
+  top: 34px;
   }
-}
+  }
 
+  /* Apply styles for screens smaller than 768px */
+  @media (max-width: 767.98px) {
+  .vertical-wrapper {
+  /* Add your desired styles for smaller screens here */
+  padding: 20px;
+  }
+  }
 
-/*****CONTAINERS*****/
-.container-fluid {
+  /* Apply styles for screens equal to or larger than 768px */
+  @media (min-width: 768px) {
+  .vertical-wrapper {
+  /* Add your desired styles for larger screens here */
+  padding: 40px;
+  }
+  }
+
+  /CONTAINERS/
+  .container-fluid {
   padding: 3% 15% 7%;
-}
+  }
 
-/* SECTIONS */
-.colored-section {
-  background-color: ##146933;
+  /* SECTIONS */
+  .colored-section {
+  background-color: #146933;
   color: #fff;
-}
+  }
 
-.white-section {
+  .white-section {
   background-color: #fff;
-}
+  }
 
-/******BUTTONS*****/
-.btn {
+  /*BUTTONS*/
+  .btn {
   background: #000000;
   background-image: -webkit-linear-gradient(top, #000000, #adadad);
   background-image: -moz-linear-gradient(top, #000000, #adadad);
@@ -197,30 +229,40 @@ margin-bottom: 30px;
   font-size: 14px;
   padding: 2.5px 5px 2.5px 5px;
   text-decoration: none;
-}
-
-.btn:hover {
-  background: #146933;
-  text-decoration: none;
-}
-
-/* Footer Section */
-#footer {
-  background-color: #009933;
-  color: #fff;
-}
-
-.social-icon {
-  margin: 20px 10px;
-}
-
-@media (max-width: 1028px) {
-  #title {
-    text-align: center;
   }
 
-.title-image {
+  .btn:hover {
+  background: #146933;
+  text-decoration: none;
+  }
+
+  /* Footer Section */
+  #footer {
+  background-color: #009933;
+  color: #fff;
+  }
+
+  .social-icon {
+  margin: 20px 10px;
+  }
+
+  @media (max-width: 1028px) {
+  #title {
+  text-align: center;
+  }
+
+  .title-image {
   position: static;
   transform: rotate(0);
-}
+  }
 
+  .skill-button {
+  margin-bottom: 10px;
+  }
+
+  .skills-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+  }

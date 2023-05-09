@@ -33,6 +33,7 @@ h2.section-title::before {
   transform: translateY(-50%);
 }
 
+/* Wrappers */
 .vertical-wrapper {
   position: relative;
   max-width: 1200px;
@@ -44,7 +45,7 @@ h2.section-title::before {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: calc(66.66667% - 8px); /* Adjust the position of the vertical line */
   width: 1px;
   background: #333;
   background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5));
@@ -53,7 +54,26 @@ h2.section-title::before {
   z-index: -1;
 }
 
+/* Marker points */
+.marker {
+  position: relative;
+  padding-left: 24px; /* Adjust the padding to align with the vertical line */
+}
 
+.marker::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #333;
+  z-index: 1;
+}
+
+/* Timeline */
 .timeline {
   position: relative;
   padding: 0;
@@ -135,6 +155,13 @@ h2.section-title::before {
 @media (min-width: 1200px) {
   .ed-child2-item {
     flex-basis: 30%;
+  }
+}
+
+/* Add a media query for mobile devices */
+@media (max-width: 767.98px) {
+  .vertical-wrapper::before {
+    display: none;
   }
 }
 

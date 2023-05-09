@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@huggingface">
-
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Icon -->
   <link rel="icon" href="images/favicon.ico">
 
   <!-- Google Fonts -->
@@ -21,185 +20,200 @@
 
   <!-- Vue.js Library -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        darkMode: false
+      },
+      methods: {
+        toggleDarkMode() {
+          this.darkMode = !this.darkMode;
+        }
+      }
+    });
+  </script>
 
   <!-- Bootstrap Scripts -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s0my6Fb7fV2FgW3fd" crossorigin="anonymous">
+
+  <!-- Add Bootstrap JavaScript and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s0my6Fb7fV2FgW3fd" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybB3S3WL3z4E0e1fyoO3biJE0p7lX0z6xCBqgWt3Mgdm5pFfR" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </head>
   
 <body>
-  <!-- TITLE -->
-<section class="container-fluid pt-3 pb-3" id="title">
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">William Duggan</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#work-experience-section">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education-section">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certifications-section">Certs</a>
-                    </li>
-                </ul>
+    <!-- TITLE -->
+    <header id="title">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">William Duggan</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#work-experience-section">Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education-section">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#certifications-section">Certs</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Title -->
-    <div class="container mt-3">
-        <hr>
-        <div class="row">
-            <div class="col-md-12 col-lg-6">
-                <h4>Business Operations | Data Science</h4>
-                <p>Business operations manager with 13+ years in logistics, armed with data analysis, machine learning, and programming skills. Passionate about developing data-driven solutions to address complex business challenges. A strategic thinker with insight for leveraging technology to improve business processes and drive innovation.</p>
-            </div>
-
-            <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
-                <img class="title-image img-fluid" src="images/wmd.png" alt="william profile picture">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-  <section>  
-  <!-- Main content -->
-     
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="container-fluid vertical-wrapper">
-          <div class="col-12 col-md-8"> 
-            <h2 id="skills" class="section-title">Programming Skills</h2>
+        <!-- Title -->
+        <div class="container mt-3">
+            <hr>
             <div class="row">
-              <div class="col">
-                <button type="button" class="btn btn-outline-primary skill-button">CSS</button>
-              </div>
-              <div class="col">
-                <button type="button" class="btn btn-outline-primary skill-button">HTML</button>
-              </div>
-              <div class="col">
-                <button type="button" class="btn btn-outline-primary skill-button">Javascript</button>
-              </div>
-              <div class="col">
-                <button type="button" class="btn btn-outline-primary skill-button">Python</button>
-              </div>
-              <div class="col">
-                <button type="button" class="btn btn-outline-primary skill-button">R</button>
-              </div>
-              <div class="col">
-                <button type="button" class="btn btn-outline-primary skill-button">SQL</button>
-              </div>
+                <div class="col-md-12 col-lg-6">
+                    <h4>Business Operations | Data Science</h4>
+                    <p>Business operations manager with 13+ years in logistics, armed with data analysis, machine learning, and programming skills. Passionate about developing data-driven solutions to address complex business challenges. A strategic thinker with insight for leveraging technology to improve business processes and drive innovation.</p>
+                </div>
+
+                <div class="col-md-12 col-lg-6 d-flex align-items-center justify-content-center">
+                    <img class="title-image img-fluid" src="images/wmd.png" alt="william profile picture">
+                </div>
             </div>
-          </div>
         </div>
+    </header>
 
 
-      <div class="container-fluid vertical-wrapper">
-      <div class="col-12 col-md-4"> 
-      <h2 id="work-experience-section" class="section-title">Work Experience</h2>
-      <h3>Wilmington Paper Corporation</h3>
-      <h4>Operations & Data Lead</h4>
-      <h5>Pine Brook, NJ</h5>
-      <p>July 2015 - April 2023</p>
-      <ul>
-        <li>Managed daily supply chain operations for 30+ accounts, ensuring safe and reliable workflows for suppliers, customers, and carriers.</li>
-        <li>Established standard operating procedures and work instructions for 30+ accounts, promoting consistency and scalability in operations.</li>
-        <li>Trained employees to navigate and operate internal database to create, edit, and report accurate information to collect and distribute across departments.</li>
-        <li>Extracted data from internal database using SQL queries to support data-driven decision making and improve customer understanding and satisfaction.</li>
-        <li>Enabled data-driven decision making by ETL methods to create and categorize key features matching regional vendor costs and business requirements from trend analysis.</li>
-        <li>Conducted a data project to identify inefficiencies in supply chain operations.</li>
-        <li>Achieved a 6% net cost reduction through the implementation of negotiating with reliable vendors for exporting product out of our mid-west accounts.</li>
-        <li>Assisted the IT group with DevOps for the customer web portal, providing back-end support and administrative credentials.</li>
-      </ul>
-
-      <h3>H&M International Transportation</h3>
-      <h4>Assistant Terminal Manager</h4>
-      <h5>Jersey City, NJ</h5>
-      <p>Oct 2013 - June 2015</p>
-      <ul>
-        <li>Ensured seamless alignment of Operation Manager shifts with 10 daily inbound/outbound cargo train schedules.</li>
-        <li>Assisted in negotiating local ILA labor contracts, providing 24/7 lift operation coverage to Norfolk Southern and CSX rail yards.</li>
-        <li>Improved expected lift per man hour (LPMH) by 10%, resulting in increased productivity and efficiency.</li>
-        <li>Monitored train arrival and departure times to ensure timely and safe operations.</li>
-        <li>Scheduled and managed manpower effectively to increase terminal efficiency and reduce delays.</li>
-        <li>Collaborated closely with stakeholders to identify and meet their needs, resulting in improved customer satisfaction.</li>
-        <li>Established and tracked key performance indicators (KPIs) for railroad operations.</li>
-        <li>Reduced vendor dwell time by 25% from over 2 hours to 1 hour and 15 minutes.</li>
-        <li>Increased operational efficiency, resulting in improved productivity and reduced downtime.</li>
-        <li>Implemented cost-saving measures that resulted in decreased expenses.</li>
-      </ul>
-      <br>
-      <h4>Operations Manager</h4>
-      <h5>Jersey City, NJ</h5>
-      <p>Jan 2012 - Oct 2013</p>
-      <ul>
-        <li>Planned with Norfolk Southern (NS) managers through daily cargo train activities.</li>
-        <li>Managed 16+ company assets to unload and load 6 daily cargo trains for Norfolk Southern (NS).</li>
-        <li>Tracked and analyzed daily train manifests to report on-time receiving and delivering of hazardous and non-hazardous cargo.</li>
-        <li>Responsible for safety and security of shift employees, reporting daily lift per man hour and all mechanical down times.</li>
-      </ul>
-
-      <h3>APM Terminals</h3>
-      <h4>Operations Manager, Rail Department</h4>
-      <h5>Port Elizabeth, NJ</h5>
-      <p>Oct 2010 - Dec 2011</p>
-      <ul>
-        <li>Managed daily rail loading/unloading activities for 20+ ILA workers to ensure productive, safe, and secure working environments for the Millennium Marine Rail integration.</li>
-        <li>Maximized deadline achievement in collaboration with management, railroad labor, in-house labor, and customer teams.</li>
-      </ul>
-      <h4>Operations Manager, Marine Department</h4>
-      <h5>Port Elizabeth, NJ</h5>
-      <p>Oct 2009 - Oct 2010</p>
-      <ul>
-        <li>Managed daily labor to ensure safe and secure work environments by planning and monitoring marine, and rail operations.</li>
-        <li>Maximized deadline achievement in collaboration with management, railroad labor, and marine foreman to be within 50+ moves per hour.</li>
-      </ul>
-      </div>
-      </div>
-      <div class="container-fluid vertical-wrapper">
-      <div class="col-12 col-md-4">
-      <h2 id="education-section" class="section-title">Education</h2>
-      <h3>New Jersey Institute of Technology</h3> 
-      <h5>Newark, NJ</h5>
-      <p>May 2021 - Dec 2023</p>
-      <h6>MS, Data Science</h6>
-      <br>
-      <h3>York College of Pennsylvania</h3>
-      <h5>York, PA</h5>
-      <p>Aug 2004 - Dec 2008</p>
-      <h6>BS, Business Administration</p>
-      <br>
-      <h3>Seton Hall Preparatory</h3>
-      <h5>West Orange, NJ</h5>
-      <p>Sep 2000 - May 2004</p>
-      <h6>High School Diploma</h6>
-      </div>
-        </div>
-      </div>
-
-
-      <div class="container-fluid vertical-wrapper">
-      <div class="col-12 col-md-4">
-      <h2 id="certifications-section" class="section-title">Certificates</h2>
-      <ul>
-        <li>NJIT - Data Mining Professional</li>
-        <li>IBM Cognitive - Data Science</li>
-        <li>Microsoft - Power BI</li>
-       </ul>
-      </div>
-        </div>
-      </div>
+    <section class="content">
+      <!-- Main content -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="container-fluid vertical-wrapper">
+              <div class="timeline">
+                  <!-- Add your skills content here -->
+                  <h2 id="skills" class="section-title">Programming Skills</h2>
+                  <div class="row">
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-primary skill-button">CSS</button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-primary skill-button">HTML</button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-primary skill-button">Javascript</button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-primary skill-button">Python</button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-primary skill-button">R</button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-primary skill-button">SQL</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+            <div class="container-fluid vertical-wrapper">
+                <div class="timeline">
+                    <h2 id="work-experience-section" class="section-title">Work Experience</h2>
+                    <!-- Add your experience timeline items here -->
+                    <h3>Wilmington Paper Corporation</h3>
+                    <h4>Operations & Data Lead</h4>
+                    <h5>Pine Brook, NJ</h5>
+                    <p>July 2015 - April 2023</p>
+                    <ul>
+                      <li>Managed daily supply chain operations for 30+ accounts, ensuring safe and reliable workflows for suppliers, customers, and carriers.</li>
+                      <li>Established standard operating procedures and work instructions for 30+ accounts, promoting consistency and scalability in operations.</li>
+                      <li>Trained employees to navigate and operate internal database to create, edit, and report accurate information to collect and distribute across departments.</li>
+                      <li>Extracted data from internal database using SQL queries to support data-driven decision making and improve customer understanding and satisfaction.</li>
+                      <li>Enabled data-driven decision making by ETL methods to create and categorize key features matching regional vendor costs and business requirements from trend analysis.</li>
+                      <li>Conducted a data project to identify inefficiencies in supply chain operations.</li>
+                      <li>Achieved a 6% net cost reduction through the implementation of negotiating with reliable vendors for exporting product out of our mid-west accounts.</li>
+                      <li>Assisted the IT group with DevOps for the customer web portal, providing back-end support and administrative credentials.</li>
+                    </ul>
+                    <br>
+                    <h3>H&M International Transportation</h3>
+                    <h4>Assistant Terminal Manager</h4>
+                    <h5>Jersey City, NJ</h5>
+                    <p>Oct 2013 - June 2015</p>
+                    <ul>
+                      <li>Ensured seamless alignment of Operation Manager shifts with 10 daily inbound/outbound cargo train schedules.</li>
+                      <li>Assisted in negotiating local ILA labor contracts, providing 24/7 lift operation coverage to Norfolk Southern and CSX rail yards.</li>
+                      <li>Improved expected lift per man hour (LPMH) by 10%, resulting in increased productivity and efficiency.</li>
+                      <li>Monitored train arrival and departure times to ensure timely and safe operations.</li>
+                      <li>Scheduled and managed manpower effectively to increase terminal efficiency and reduce delays.</li>
+                      <li>Collaborated closely with stakeholders to identify and meet their needs, resulting in improved customer satisfaction.</li>
+                      <li>Established and tracked key performance indicators (KPIs) for railroad operations.</li>
+                      <li>Reduced vendor dwell time by 25% from over 2 hours to 1 hour and 15 minutes.</li>
+                      <li>Increased operational efficiency, resulting in improved productivity and reduced downtime.</li>
+                      <li>Implemented cost-saving measures that resulted in decreased expenses.</li>
+                    </ul>
+                    <br>
+                    <h4>Operations Manager</h4>
+                    <h5>Jersey City, NJ</h5>
+                    <p>Jan 2012 - Oct 2013</p>
+                    <ul>
+                      <li>Planned with Norfolk Southern (NS) managers through daily cargo train activities.</li>
+                      <li>Managed 16+ company assets to unload and load 6 daily cargo trains for Norfolk Southern (NS).</li>
+                      <li>Tracked and analyzed daily train manifests to report on-time receiving and delivering of hazardous and non-hazardous cargo.</li>
+                      <li>Responsible for safety and security of shift employees, reporting daily lift per man hour and all mechanical down times.</li>
+                    </ul>
+                    <br>
+                    <h3>APM Terminals</h3>
+                    <h4>Operations Manager, Rail Department</h4>
+                    <h5>Port Elizabeth, NJ</h5>
+                    <p>Oct 2010 - Dec 2011</p>
+                    <ul>
+                      <li>Managed daily rail loading/unloading activities for 20+ ILA workers to ensure productive, safe, and secure working environments for the Millennium Marine Rail integration.</li>
+                      <li>Maximized deadline achievement in collaboration with management, railroad labor, in-house labor, and customer teams.</li>
+                    </ul>
+                    <br>
+                    <h4>Operations Manager, Marine Department</h4>
+                    <h5>Port Elizabeth, NJ</h5>
+                    <p>Oct 2009 - Oct 2010</p>
+                    <ul>
+                      <li>Managed daily labor to ensure safe and secure work environments by planning and monitoring marine, and rail operations.</li>
+                      <li>Maximized deadline achievement in collaboration with management, railroad labor, and marine foreman to be within 50+ moves per hour.</li>
+                    </ul>
+                    <br>
+                </div>
+            </div>
+            <div class="container-fluid vertical-wrapper">
+                <div class="timeline">
+                    <h2 id="education-section" class="section-title">Education</h2>
+                    <!-- Add your education timeline items here -->
+                    <h3>New Jersey Institute of Technology</h3> 
+                    <h5>Newark, NJ</h5>
+                    <p>May 2021 - Dec 2023</p>
+                    <h6>MS, Data Science</h6>
+                    <br>
+                    <h3>York College of Pennsylvania</h3>
+                    <h5>York, PA</h5>
+                    <p>Aug 2004 - Dec 2008</p>
+                    <h6>BS, Business Administration</p>
+                    <br>
+                    <h3>Seton Hall Preparatory</h3>
+                    <h5>West Orange, NJ</h5>
+                    <p>Sep 2000 - May 2004</p>
+                    <h6>High School Diploma</h6>
+                </div>
+            </div>
+            <div class="container-fluid vertical-wrapper">
+                <div class="timeline">
+                    <h2 id="certifications-section" class="section-title">Certificates</h2>
+                    <!-- Add your certificates content here -->
+                    <ul>
+                      <li>NJIT - Data Mining Professional</li>
+                      <li>IBM Cognitive - Data Science</li>
+                      <li>Microsoft - Power BI</li>
+                   </ul>
+                </div>
+            </div>
+        </main>
     </section>
-    </main>
 
 </body>
 

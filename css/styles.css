@@ -1,296 +1,85 @@
-/*****Styles*****/
+/* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: #333;
+    padding: 1em; /* Proper padding around the body */
+    font-family: Arial, sans-serif; /* Default font */
 }
 
+/* Headers */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  color: #333;
+    color: #003366; /* Dark blue color for headers */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-h2 {
-  color: #006400;
+/* Horizontal Line */
+hr {
+    border-color: #404040; /* Dark gray color for horizontal rules */
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-h2.section-title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  position: relative;
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background to match the NAVBAR theme */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
 }
 
-h2.section-title::before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #333;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
+/* NAVBAR Floats */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Wrappers */
-.vertical-wrapper {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Work History Timeline */
+.timeline-block {
+    padding: 20px;
+    margin-left: 60px; /* Adjusted to prevent overlap */
 }
 
-.vertical-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(66.66667% - 8px); /* Adjust the position of the vertical line */
-  width: 1px;
-  background: #333;
-  background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5));
-  background-size: 1px 4px;
-  background-repeat: repeat-y;
-  z-index: -1;
+.timeline-block:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
-/* Marker points */
-.marker {
-  position: relative;
-  padding-left: 24px; /* Adjust the padding to align with the vertical line */
+/* Core Competencies */
+.competencies-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.marker::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #333;
-  z-index: 1;
+.competencies-table td {
+    padding: 10px;
+    vertical-align: top;
+    width: 33.33%;
 }
 
-/* Timeline */
-.timeline {
-  position: relative;
-  padding: 0;
-}
-
+/* Timeline Customizations */
 .timeline:before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  height: 100%;
-  width: 2px;
-  background-color: #ddd;
+    background: #C5C5C5;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 30px;
-  padding: 0 30px; /* Added padding to space the content */
+.timeline-block:before {
+    background: #ffffff;
+    border: 2px solid #C5C5C5;
 }
 
+/* Responsive Tweaks */
+@media (max-width: 767px) {
+    body {
+        padding: 0.5em;
+    }
 
-.timeline-year {
-  position: absolute;
-  left: 30px;
-  width: 30px;
-  text-align: right;
-  font-weight: bold;
-  color: #333;
+    .timeline-block {
+        margin-left: 40px; /* Adjust for smaller screens */
+    }
 }
 
-.timeline-content {
-  padding-left: 80px; /* Updated this value */
-}
+/* Add additional media queries and styles as needed */
 
-
-/* Dark mode */
-.dark-mode {
-  background-color: #090909;
-  color: white;
-}
-
-/* Section titles */
-.section-title {
-  margin-top: 1.5rem;
-  font-weight: bold;
-}
-
-/* ED-child 2 section */
-.ed-child2 {
-  background-color: #f9f9f9;
-  padding: 2rem 0;
-}
-
-.ed-child2-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.ed-child2-item {
-  flex-basis: 100%;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.ed-child2-item img {
-  max-width: 100%;
-}
-
-/* For medium and large screens */
-@media (min-width: 768px) {
-  .ed-child2-item {
-    flex-basis: 45%;
-  }
-}
-
-/* For extra-large screens */
-@media (min-width: 1200px) {
-  .ed-child2-item {
-    flex-basis: 30%;
-  }
-}
-
-/* Add a media query for mobile devices */
-@media (max-width: 767.98px) {
-  .vertical-wrapper::before {
-    display: none;
-  }
-}
-
-/* Buttons */
-.download-button {
-  margin: 2% 0% 2% 0;
-}
-
-/* Title Section */
-#title {
-  background-color: #146933;
-  color: #fff;
-  text-align: left;
-}
-
-#title .container-fluid {
-  padding: 3% 15% 7%;
-}
-
-/* Title Image */
-.title-image {
-  width: 30%;
-  /* Uncomment the following lines if you want to apply rotation and position styles
-  transform: rotate(25deg);
-  position: absolute;*/
-  right: 20%;
-}
-
-#professional-summary {
-  color: #009933;
-}
-
-@media only screen and (min-width: 600px) {
-  .PR .section-child::before, .ED .section-child::before, .INT .section-child::before {
-  content: '';
-  display: block;
-  position: absolute;
-  color: rgb(50, 50, 50);
-  width: 20px;
-  height: 20px;
-  background: rgb(50, 50, 50);
-  border-radius: 50%;
-  left: -36px;
-  top: 34px;
-  }
-}
-
-/* Apply styles for screens smaller than 768px */
-@media (max-width: 767.98px) {
-  .vertical-wrapper {
-  /* Add your desired styles for smaller screens here */
-  padding: 20px;
-  }
-}
-
-/* Apply styles for screens equal to or larger than 768px */
-@media (min-width: 768px) {
-  .vertical-wrapper {
-  /* Add your desired styles for larger screens here */
-  padding: 40px;
-  }
-}
-
-/* CONTAINERS */
-.container-fluid {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-/* SECTIONS */
-.colored-section {
-  background-color: #146933;
-  color: #fff;
-}
-
-.white-section {
-  background-color: #fff;
-}
-
-/*BUTTONS*/
-.btn {
-  background: #000000;
-  background-image: -webkit-linear-gradient(top, #000000, #adadad);
-  background-image: -moz-linear-gradient(top, #000000, #adadad);
-  background-image: -ms-linear-gradient(top, #000000, #adadad);
-  background-image: -o-linear-gradient(top, #000000, #adadad);
-  background-image: linear-gradient(to bottom, #000000, #adadad);
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  border-radius: 14px;
-  font-family: "Monospace", monospace;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 2.5px 5px 2.5px 5px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #146933;
-  text-decoration: none;
-}
-
-/* Footer Section */
-#footer {
-  background-color: #009933;
-  color: #fff;
-}
-
-.social-icon {
-  margin: 20px 10px;
-}
-
-@media (max-width: 1028px) {
-  #title {
-  text-align: center;
-}
-
-.title-image {
-  position: static;
-  transform: rotate(0);
-}
-
-.skill-button {
-  margin-bottom: 10px;
-}
-
-.skills-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  }
-}
